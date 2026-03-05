@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <AbilityDef>
+    <defName>MSSFP_GeneTransfer</defName>
+    <label>transfer genes</label>
+    <description>Transfer this person's entire xenogene package into another person using a special injector organ. Unlike the archite reimplanter, this process permanently strips the carrier of all transferred genes - there is no regrowth.</description>
+    <iconPath>UI/Icons/Genes/Gene_XenogermReimplanter</iconPath>
+    <warmupStartSound>ReimplantXenogerm_Cast</warmupStartSound>
+    <warmupEffecter>Implant_Xenogerm</warmupEffecter>
+    <displayOrder>500</displayOrder>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <jobDef>CastAbilityTouch</jobDef>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showWhenDrafted>false</showWhenDrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <range>-1</range>
+      <warmupTime>4</warmupTime>
+      <stunTargetOnCastStart>true</stunTargetOnCastStart>
+      <targetParams>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityEffect">
+        <compClass>MSSFP.Abilities.CompAbilityEffect_GeneTransfer</compClass>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>
